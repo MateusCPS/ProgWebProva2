@@ -10,6 +10,38 @@ var close1 = document.getElementById("close1");
 var close2 = document.getElementById("close2");
 var close3 = document.getElementById("close3");
 
+async function traduzirTexto(texto, targetLang = "pt") {
+  const apiKey = "AIzaSyAUCp6EsuJcklXrq-1xsf1LaWGQXaETmzU";
+  const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=${apiKey}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      q: texto,
+      target: targetLang,
+    }),
+  });
+  const data = await response.json();
+  return data.data.translations[0].translatedText;
+}
+
+async function buscarAnime(id) {
+  const response = await fetch(`https://api.jikan.moe/v4/anime/${id}`);
+  const data = await response.json();
+  
+  const sinopse = await traduzirTexto(data.data.synopsis);
+
+  document.getElementById("anime-info").innerHTML = `
+    <h2>${data.data.title}</h2>
+    <img src="${data.data.images.jpg.image_url}" alt="${data.data.title}" style="max-width: 300px;">
+    <p>${sinopse}</p>
+    <p><strong>Episódios:</strong> ${data.data.episodes}</p>
+    <p><strong>Classificação:</strong> ${data.data.score}</p>
+  `;
+}
+
+buscarAnime(5114); 
+
+
 btnTrailer1.onclick = function() {
   modal1.style.display = "block";
 }
