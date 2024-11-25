@@ -43,18 +43,6 @@ window.onclick = function(event) {
     modal3.style.display = "none";
   }
 }
-
-
-document.getElementById("toggle-theme").addEventListener("click", () => {
-
-    document.body.classList.toggle("dark-mode");
-  
-    const isDarkMode = document.body.classList.contains("dark-mode");
-    document.getElementById("toggle-theme").textContent = isDarkMode
-      ? "Modo Claro"
-      : "Modo Escuro";
-  });
-
   document.getElementById("contact-form").addEventListener("submit", e => {
     e.preventDefault();
     alert("Mensagem enviada com sucesso!");
