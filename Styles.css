@@ -1,17 +1,14 @@
-/* Tema Claro (Default) */
 body {
     background-color: #ffffff;
     color: #000000;
     transition: background-color 0.3s, color 0.3s;
   }
-  
-  /* Tema Escuro */
+
   body.dark-mode {
     background-color: #121212;
     color: #ff2020;
   }
-  
-  /* Estilo do Botão */
+
   #toggle-theme {
     position: fixed;
     bottom: 20px;
@@ -30,8 +27,7 @@ body {
     color: #000000;
   }
 
-  
-  /* Estilo Medieval: Header */
+
 header {
     font-family: 'Cinzel', serif;
     background-color: #4b2e1e;
@@ -40,8 +36,7 @@ header {
     border-bottom: 5px solid #d4af37;
     text-align: center;
   }
-  
-  /* Estilo Medieval: Links no Header */
+
   header a {
     color: #f5f5dc;
     text-decoration: none;
@@ -53,7 +48,7 @@ header {
     color: #d4af37;
   }
   
-  /* Botões Gerais */
+
   button {
     font-family: 'Cinzel', serif;
     padding: 8px 15px;
@@ -69,15 +64,13 @@ header {
     background-color: #d4af37;
     color: #4b2e1e;
   }
-  
-  /* Imagens com Bordas de Pergaminho */
+
   img {
     border: 5px solid #d4af37;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   }
-  
-  /* Animação Suave */
+
   * {
     transition: all 0.3s ease-in-out;
   }
@@ -116,47 +109,47 @@ header {
     }
   }
 
- /* Estilo para os containers dos personagens */
+
 .character {
-    display: flex; /* Flexbox para alinhar a imagem e o texto lado a lado */
-    align-items: center; /* Alinha a imagem e o texto verticalmente */
+    display: flex; 
+    align-items: center; 
     margin: 20px 0;
-    border: 3px solid transparent; /* Borda inicial transparente */
+    border: 3px solid transparent;
     border-radius: 10px;
     padding: 10px;
-    transition: all 0.3s ease; /* Transição suave para o efeito */
+    transition: all 0.3s ease;
   }
   
   .character img {
-    width: 150px; /* Largura da imagem */
+    width: 150px; 
     height: auto;
-    border-radius: 8px; /* Bordas arredondadas na imagem */
-    margin-right: 20px; /* Espaço entre a imagem e o texto */
-    transition: transform 0.3s ease; /* Transição suave para o aumento */
+    border-radius: 8px; 
+    margin-right: 20px; 
+    transition: transform 0.3s ease; 
   }
   
-  /* Efeito de aumento da imagem e borda ao passar o mouse */
+
   .character:hover img {
-    transform: scale(1.1); /* Aumenta a imagem */
+    transform: scale(1.1);
   }
   
   .character:hover {
-    border: 3px solid #4b2e1e; /* Muda a borda para uma cor específica */
+    border: 3px solid #4b2e1e;
   }
   
-  /* Estilo do nome e descrição */
+
   .character h3 {
     font-size: 1.5rem;
-    margin: 0; /* Remove a margem padrão do h3 */
-    color: #333; /* Cor do nome */
+    margin: 0; 
+    color: #333;
   }
   
   .character p {
     font-size: 1rem;
-    color: #666; /* Cor da descrição */
+    color: #666; 
   }
 
-/* Seção de Episódios */
+
 .episodes {
     display: flex;
     justify-content: center;
@@ -195,9 +188,9 @@ header {
   }
 
 
- /* Estilo do Modal */
+
 .modal {
-    display: none; /* Inicialmente escondido */
+    display: none; 
     position: fixed;
     z-index: 1;
     left: 0;
@@ -206,10 +199,9 @@ header {
     height: 100%;
     overflow: auto;
     background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4); /* Fundo semitransparente */
+    background-color: rgba(0, 0, 0, 0.4); 
   }
   
-  /* Conteúdo do Modal */
   .modal-content {
     background-color: #fff;
     margin: 15% auto;
@@ -219,7 +211,6 @@ header {
     max-width: 600px;
   }
   
-  /* Botão de Fechar */
   .close {
     color: #aaa;
     float: right;
